@@ -6,15 +6,13 @@ namespace first_c__thing
     {
         static void Main(string[] args)
         {
-            string name;
-            string time = DateTime.Now.ToString("h:mm:ss tt");
-            Console.WriteLine("What is your name?");
-            name = Console.ReadLine();
-            
-            Console.WriteLine("Nice to meet you " + name + "!");
-            Console.WriteLine("The time is currently " + time + "!" );
-            Console.Write("\n\nPress any key to continue...");
-            Console.ReadKey();
+            Console.WriteLine($"Hi, {Environment.UserName}}!"); 
+            if (args.Length < 1) {
+                Console.WriteLine("Give me an arg >:(");
+            }
+            else if (args[0] == "time") {
+                Console.WriteLine($"The time is currently {DateTime.Now.ToString("h:mm:ss tt")}");
+            }
         }
     }
 }
